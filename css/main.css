@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: #282828;
+    /* background-color: aqua;
+    flex-direction: column;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+
+
+ul{
+    width: auto;
+    margin-top: 8px;
+}
+
+li{
+    display: inline-block;
+    padding: 15px 30px;
+    padding-right: 340px;
+}
+
+a{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+a:hover{
+    color: #f0c330;
+    transition: 0.5s;
+}
+
+
+footer{
+    background-color: orange;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+nav{
+    background-color: orange;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    position: fixed;
+}
+
+main{
+    padding-bottom: 5vh;
+    /* margin-top: 23px;   niet nodig! */
+    width: 100%;
+    height: 200vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../img/Funny-pizza-pattern.-Cartoon-Italian-food-design.-Yellow-Orange..png");
+}
+
+.blok {
+    margin-top: 5%;
+    background-color: white;
+    display: flex;
+    width: 40%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#kekfoto{
+    width: 50%;
+    height: 50%;
+    align-items: bottom;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#gewoonpizza{
+    width: 400px;
+    height: 300px;
+}
+
