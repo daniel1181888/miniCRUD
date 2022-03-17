@@ -12,26 +12,41 @@
 <body>
 
     <!-- header/nav -->
-    
-        <?php include_once("header.php")?>
-    
-        
+
+    <header>
+        <nav>
+            <a href="index.php">pizzas</a>
+            <a href="drinken.php">drinken</a>
+            <a href="login.php">login</a>
+            <div class="account">
+                <?php 
+                if(isset($_POST["submitknop"])){
+                    echo "<p id=\"username\">".$_POST["User"]."</p>";
+                }
+            ?>
+                <img id="profileicon" src="img/round icon.png" alt="">
+            </div>
+        </nav>
+    </header>
+
+
     <main class="short">
         <div class="login-form">
             <h1>login form</h1>
-            <form action="#" method="post">
+            <form action="index.php" method="post">
                 <p>Username</p>
                 <input type="text" name="User" placeholder="username">
                 <p>password</p>
                 <input type="password" name="password" placeholder="password">
-                <button type="submit">login</button>
+                <button type="submit" name="submitknop">login</button>
             </form>
         </div>
     </main>
     <footer>
         <h1>pizza/footer</h1>
     </footer>
-    
+
     <script src="js/login.js"></script>
 </body>
+
 </html>

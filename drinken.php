@@ -16,7 +16,21 @@
 
 
     <!-- header/nav -->
-    <?php include_once("header.php")?>
+    <header>
+        <nav>
+            <a href="index.php">pizzas</a>
+            <a href="drinken.php">drinken</a>
+            <a href="login.php">login</a>
+            <div class="account">
+                <?php 
+                if(isset($_POST["submitknop"])){
+                    echo "<p id=\"username\">".$_POST["User"]."</p>";
+                }
+            ?>
+                <img id="profileicon" src="img/round icon.png" alt="">
+            </div>
+        </nav>
+    </header>
 
 
 
