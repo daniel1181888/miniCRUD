@@ -11,37 +11,32 @@
 
 <!-- body -->
 
-    <body>
-
-    
-
-        <!-- header/nav -->
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.php">pizzas</a></li>
-                    <li><a href="drinken.php">drinken</a></li>
-                    <li><a href="login.php">login</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        
-        
-
-        <!-- main -->
-        <main>
-            <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
-            <div class="blok">
-                <h1 id="tekst">yeah</h1>
-            </div>
-        </main>
+<body>
 
 
-        <!-- footer -->
-        <footer>
-            <h1>pizza/footer</h1>
-        </footer>
-    </body>
-    <script src="js/test.js"></script>
+
+    <!-- header/nav -->
+    <?php include_once("header.php")?>
+
+
+
+    <!-- main -->
+    <main>
+        <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
+        <div class="items">
+            <?php include("item.php")?>
+            <?php include("item.php")?>
+            <?php include("item.php")?>
+            <?php include("item.php")?>
+        </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <h1>pizza/footer</h1>
+    </footer>
+</body>
+<script src="js/login.js"></script>
+
 </html>
