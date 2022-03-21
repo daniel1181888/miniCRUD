@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body onload="pageLoader()">
-    <div id="loader">
-        <img id="laadfoto" src="img/PIZZA.png" alt="">
-    </div>
-    <div id="content">
+<body>
 
     <!-- header/nav -->
 
@@ -36,21 +32,22 @@
 
     <main class="short">
         <div class="login-form">
-            <h1>login form</h1>
-            <form action="index.php" method="post">
-                <p>Username</p>
-                <input type="text" name="User" placeholder="username">
-                <p>password</p>
-                <input type="password" name="password" placeholder="password">
-                <button type="submit" name="submitknop">login</button>
+            <h1>add items form</h1>
+            <form>
+                <p>item naam</p>
+                <input type="text" placeholder="item">
+                <p>foto van item</p>
+                <input type="file">
+                <p>item beschrijving</p>
+                <input type="text" placeholder="beschrijving">
+                <button type="submit" name="submitknop">add</button>
             </form>
         </div>
     </main>
     <footer>
         <h1>pizza/footer</h1>
     </footer>
-    </div>
-    <script src="js/loader.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

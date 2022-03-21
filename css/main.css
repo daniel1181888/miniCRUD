@@ -10,7 +10,6 @@ html{
 }
 
 body{
-    background: url('./bg.jpg');
     background-size: cover;
     width: 100%;
 }
@@ -57,7 +56,6 @@ nav{
 }
 
 main{
-    padding-bottom: 5vh;
     /* margin-top: 23px;   niet nodig! */
     width: 100%;
     height: auto  ; 
@@ -68,8 +66,7 @@ main{
     background-image: url("../img/Funny-pizza-pattern.-Cartoon-Italian-food-design.-Yellow-Orange..png");
 }
 
-main.short{
-    padding-bottom: 5vh;
+main.short {
     /* margin-top: 23px;   niet nodig! */
     width: 100%;
     height: 80vh; 
@@ -80,8 +77,9 @@ main.short{
 }
 
 .itemblok {
+    margin-bottom: 20px;
     display: flex;
-    margin-top: 5%;
+    margin-top: 20px;
     flex-direction: row;
     background-color: white;
     width: 40%;
@@ -103,9 +101,17 @@ main.short{
     align-items: bottom;
     animation-name: spin;
     border-radius: 5px;
-    /* animation-duration: 5000ms;
+}
+
+#laadfoto{
+    width: 200px;
+    height: 200px;
+    align-items: bottom;
+    animation-name: spin;
+    border-radius: 5px;
+    animation-duration: 1000ms;
     animation-iteration-count: infinite;
-    animation-timing-function: linear; */
+    animation-timing-function: linear;
 }
 
 @keyframes spin {
@@ -167,22 +173,15 @@ main.short{
 }
 
 .login-form button:active{
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 10px 15px;
-    width: 50%;
-    border-radius: 5px;
-    border: 0;
-    cursor: pointer;
-    background-color: black;
+    background-color: orange;
+    color: black;
 }
 
 .beschrijving{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 90px;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -199,9 +198,55 @@ main.short{
 }
 
 #toevoegenknop{
-    background-color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 40%;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: orange;
+}
+
+#toevoegenknop:active{
+    background-color: rgb(168, 115, 16);
+    color: white;
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: orange;
+}
+
+.naam{
+    width: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
-    width: 70px;
-    height: 50px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.beschrijving{
+    width: 100%;
+    height: 50%;
+}
+
+.itemdetails{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
