@@ -6,7 +6,7 @@
         </div>
         <div class="beschrijving">
             <p>LEKKER PIZZA GINO!</p>
-            <button id="toevoegenknop" type="submit" name="submitknop">toevoegen</button>
+            <button id="toevoegenknop" type="submit" name="submitknop">kopen</button>
         </div>
     </div>
 </div>

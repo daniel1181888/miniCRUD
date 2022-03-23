@@ -1,3 +1,5 @@
+<?php include_once("connect.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +33,7 @@
                 }
             ?>
                     <img id="profileicon" src="img/round icon.png" alt="">
+                    <img id="profileicon" src="img/shopping-cart.png" alt="">
                 </div>
             </nav>
         </header>
@@ -41,10 +44,17 @@
         <main>
             <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
             <div class="items">
-                <?php include("item.php")?>
-                <?php include("item.php")?>
-                <?php include("item.php")?>
-                <?php include("item.php")?>
+                <?php 
+                    $sql = "SELECT * FROM menukaart";
+                    $stmt = $connect ->
+                    prepare($sql);
+                    $stmt ->execute();
+                    $result = $stmt -> fetchAll();
+
+                    foreach($result as $res) { 
+                        echo $res['naam'];
+                    }
+                ?>
             </div>
         </main>
 

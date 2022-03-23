@@ -57,6 +57,7 @@ nav{
 
 main{
     /* margin-top: 23px;   niet nodig! */
+    min-height: 80vh;
     width: 100%;
     height: auto  ; 
     display: flex;
@@ -68,12 +69,13 @@ main{
 
 main.short {
     /* margin-top: 23px;   niet nodig! */
+    flex-direction: row;
     width: 100%;
-    height: 80vh; 
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-around
 }
 
 .itemblok {
@@ -130,6 +132,7 @@ main.short {
 }
 
 .login-form{
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
     border-radius: 20px;
     flex-direction: column;
     display: flex;
@@ -250,3 +253,30 @@ main.short {
     flex-direction: column;
     align-items: center;
 }
+
+.asortiment{
+    background-color: #f0c330;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    width: 350px;
+    height: 92%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 2px solid rgb(138, 95, 15);
+    text-align: left;
+    padding: 4px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgb(218, 141, 0)
+  }

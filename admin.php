@@ -1,3 +1,5 @@
+<?php include_once("connect.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +27,7 @@
                 }
             ?>
                 <img id="profileicon" src="img/round icon.png" alt="">
+                <img id="profileicon" src="img/shopping-cart.png" alt="">
             </div>
         </nav>
     </header>
@@ -42,6 +45,33 @@
                 <input type="text" placeholder="beschrijving">
                 <button type="submit" name="submitknop">add</button>
             </form>
+        </div>
+        <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
+        <div class="asortiment">
+            <h1>asortiment</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Prijs</th>
+                    <th>beschrijving</th>
+                    <th>naam</th>
+                </tr>
+                <?php 
+                    $sql = "SELECT * FROM menukaart";
+                    $stmt = $connect -> prepare($sql);
+                    $stmt ->execute();
+                    $result = $stmt -> fetchAll();
+
+                    foreach($result as $res) {
+                        echo "<tr>";
+                        echo "<td>".$res["ID"]."</td>";
+                        echo "<td>".$res["prijs"]."</td>";
+                        echo "<td>".$res["beschrijving"]."</td>";
+                        echo "<td>".$res["naam"]."</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </table>
         </div>
     </main>
     <footer>

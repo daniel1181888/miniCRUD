@@ -29,6 +29,7 @@
                 }
             ?>
                 <img id="profileicon" src="img/round icon.png" alt="">
+                <img id="profileicon" src="img/shopping-cart.png" alt="">
             </div>
         </nav>
     </header>
