@@ -55,6 +55,7 @@
                     <th>Prijs</th>
                     <th>beschrijving</th>
                     <th>naam</th>
+                    <th>verwijderen</th>
                 </tr>
                 <?php 
                     $sql = "SELECT * FROM menukaart";
@@ -68,6 +69,7 @@
                         echo "<td>".$res["prijs"]."</td>";
                         echo "<td>".$res["beschrijving"]."</td>";
                         echo "<td>".$res["naam"]."</td>";
+                        echo "<td><img id = \"deleteicon\" src=\"img/delete.png\" alt=\"\"></td>";
                         echo "</tr>";
                     }
                 ?>
