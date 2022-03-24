@@ -269,7 +269,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-  }
+  }s
   
   td, th {
     border: 2px solid rgb(138, 95, 15);
@@ -279,4 +279,9 @@ table {
   
   tr:nth-child(even) {
     background-color: rgb(218, 141, 0)
+  }
+
+  #deleteicon{
+      width: 40px;
+      height: 40px;
   }
