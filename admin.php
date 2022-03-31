@@ -1,4 +1,4 @@
-<?php include_once("connect.php"); ?>
+<?php include_once("includes/connect.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +26,8 @@
                     echo "<p id=\"username\">".$_POST["User"]."</p>";
                 }
             ?>
-                <img id="profileicon" src="img/round icon.png" alt="">
-                <img id="profileicon" src="img/shopping-cart.png" alt="">
+                <!-- <img id="profileicon" src="img/round icon.png" alt=""> -->
+                <a href="shoppingcart.php"><img id="profileicon" src="img/shopping-cart.png" alt=""></a>
             </div>
         </nav>
     </header>
@@ -36,9 +36,11 @@
     <main class="short">
         <div class="login-form">
             <h1>add items form</h1>
-            <form>
+            <form action="create.php" method="post">
                 <p>item naam</p>
                 <input type="text" placeholder="item">
+                <p>prijs</p>
+                <input type="number" placeholder="prijs">
                 <p>foto van item</p>
                 <input type="file">
                 <p>item beschrijving</p>
@@ -55,7 +57,7 @@
                     <th>Prijs</th>
                     <th>beschrijving</th>
                     <th>naam</th>
-                    <th>verwijderen</th>
+                    <th>aanpassen</th>
                 </tr>
                 <?php 
                     $sql = "SELECT * FROM menukaart";
@@ -69,7 +71,7 @@
                         echo "<td>".$res["prijs"]."</td>";
                         echo "<td>".$res["beschrijving"]."</td>";
                         echo "<td>".$res["naam"]."</td>";
-                        echo "<td><img id = \"deleteicon\" src=\"img/delete.png\" alt=\"\"></td>";
+                        echo "<td><img id = \"deleteicon\" src=\"img/edit.png\" alt=\"\"></td>";
                         echo "</tr>";
                     }
                 ?>

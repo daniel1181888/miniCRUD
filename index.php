@@ -1,4 +1,5 @@
-<?php include_once("connect.php"); ?>
+<?php include_once("includes/connect.php"); ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +33,8 @@
                     echo "<p id=\"username\">".$_POST["User"]."</p>";
                 }
             ?>
-                    <img id="profileicon" src="img/round icon.png" alt="">
-                    <img id="profileicon" src="img/shopping-cart.png" alt="">
+                    <!-- <img id="profileicon" src="img/round icon.png" alt=""> -->
+                    <a href="shoppingcart.php"><img id="profileicon" src="img/shopping-cart.png" alt=""></a>
                 </div>
             </nav>
         </header>
@@ -44,17 +45,7 @@
         <main>
             <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
             <div class="items">
-                <?php 
-                    $sql = "SELECT * FROM menukaart";
-                    $stmt = $connect ->
-                    prepare($sql);
-                    $stmt ->execute();
-                    $result = $stmt -> fetchAll();
-
-                    foreach($result as $res) { 
-                        echo $res['naam'];
-                    }
-                ?>
+                <?php include("php/readItems.php")?>
             </div>
         </main>
 

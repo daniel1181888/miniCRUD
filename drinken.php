@@ -30,8 +30,8 @@
                     echo "<p id=\"username\">".$_POST["User"]."</p>";
                 }
             ?>
-                    <img id="profileicon" src="img/round icon.png" alt="">
-                    <img id="profileicon" src="img/shopping-cart.png" alt="">
+                    <!-- <img id="profileicon" src="img/round icon.png" alt=""> -->
+                    <a href="shoppingcart.php"><img id="profileicon" src="img/shopping-cart.png" alt=""></a>
                 </div>
             </nav>
         </header>
@@ -42,10 +42,7 @@
         <main>
             <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
             <div class="items">
-                <?php include("item.php")?>
-                <?php include("item.php")?>
-                <?php include("item.php")?>
-                <?php include("item.php")?>
+                <?php include("php/readItems.php")?>
             </div>
         </main>
 

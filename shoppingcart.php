@@ -36,14 +36,16 @@
 
 
     <main class="short">
-        <div class="login-form">
-            <h1>login form</h1>
-            <form action="index.php" method="post">
-                <p>Username</p>
-                <input type="text" name="User" placeholder="username">
-                <p>password</p>
-                <input type="password" name="password" placeholder="password">
-                <button type="submit" name="submitknop">login</button>
+        <div class="asortiment">
+            <h1>winkelwagen</h1>
+            <form>
+                <tr>
+                    <th>ID</th>
+                    <th>Prijs</th>
+                    <th>beschrijving</th>
+                    <th>naam</th>
+                </tr>
+                <button id ="toevoegenknop"  type ="submit" name="submitknop">bestel</button>
             </form>
         </div>
     </main>
