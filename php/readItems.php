@@ -18,7 +18,7 @@
         <div class="beschrijving">
             <p><?php echo $res["beschrijving"]; ?></p>
             <button id="toevoegenknop" type="submit" name="submitknop">kopen</button>
-        </div>
+        </div> 
     </div>
 </div>
 

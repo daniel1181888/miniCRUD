@@ -1,5 +1,17 @@
 <?php include_once("includes/connect.php"); ?>
 
+<?php
+session_start();
+if(isset($_SESSION["roll"])){
+    if($_SESSION["roll"]!="admin") {
+        header("Location: ../index.php");
+        exit;
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,36 +27,30 @@
 
     <!-- header/nav -->
 
-    <header>
-        <nav>
-            <a href="index.php">pizzas</a>
-            <a href="drinken.php">drinken</a>
-            <a href="login.php">login</a>
-            <div class="account">
-                <?php 
-                if(isset($_POST["submitknop"])){
-                    echo "<p id=\"username\">".$_POST["User"]."</p>";
-                }
-            ?>
-                <!-- <img id="profileicon" src="img/round icon.png" alt=""> -->
-                <a href="shoppingcart.php"><img id="profileicon" src="img/shopping-cart.png" alt=""></a>
-            </div>
-        </nav>
-    </header>
+    <?php include("includes/header.php")?>
 
+    <?php
+    $sql = "SELECT * 
+    FROM menukaart 
+    WHERE ID = :ID";
+    $stmt = $connect -> prepare($sql);
+    $stmt -> bindParam(":ID", $_GET["ID"]);
+    $stmt -> execute();
+    $result = $stmt -> fetchAll();
+    ?>
 
     <main class="short">
         <div class="login-form">
             <h1>add items form</h1>
-            <form action="create.php" method="post">
+            <form action="php/create.php" method="post">
                 <p>item naam</p>
-                <input type="text" placeholder="item">
+                <input type="text"  name = "naam" placeholder="item">
                 <p>prijs</p>
-                <input type="number" placeholder="prijs">
+                <input type="text"  name ="prijs" placeholder="prijs">
                 <p>foto van item</p>
                 <input type="file">
                 <p>item beschrijving</p>
-                <input type="text" placeholder="beschrijving">
+                <input type="text"  name = "beschrijving" placeholder="beschrijving">
                 <button type="submit" name="submitknop">add</button>
             </form>
         </div>
@@ -71,16 +77,14 @@
                         echo "<td>".$res["prijs"]."</td>";
                         echo "<td>".$res["beschrijving"]."</td>";
                         echo "<td>".$res["naam"]."</td>";
-                        echo "<td><img id = \"deleteicon\" src=\"img/edit.png\" alt=\"\"></td>";
+                        echo "<td><button id = 'editbutton'><a href='edit.php?id={$res['ID']}'><img id  = 'editicon' src='img/edit.png'></a></button> <button id = 'editbutton'><a href='php/delete.php?id={$res["ID"]}'><img id  = 'editicon' src='img/delete.png'></a></button> </td>";
                         echo "</tr>";
                     }
                 ?>
             </table>
         </div>
     </main>
-    <footer>
-        <h1>pizza/footer</h1>
-    </footer>
+    <?php include("includes/footer.php")?>
     <script src="js/login.js"></script>
 </body>
 

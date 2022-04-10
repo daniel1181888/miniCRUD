@@ -1,3 +1,11 @@
+<?php include_once("includes/connect.php"); 
+session_start();
+if(isset($_POST["user"])){
+    $_SESSION["username"] = $_POST["user"];
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,22 +27,7 @@
 
 
         <!-- header/nav -->
-        <header>
-            <nav>
-                <a href="index.php">pizzas</a>
-                <a href="drinken.php">drinken</a>
-                <a href="login.php">login</a>
-                <div class="account">
-                    <?php 
-                if(isset($_POST["submitknop"])){
-                    echo "<p id=\"username\">".$_POST["User"]."</p>";
-                }
-            ?>
-                    <!-- <img id="profileicon" src="img/round icon.png" alt=""> -->
-                    <a href="shoppingcart.php"><img id="profileicon" src="img/shopping-cart.png" alt=""></a>
-                </div>
-            </nav>
-        </header>
+        <?php include("includes/header.php")?>
 
 
 
@@ -48,9 +41,7 @@
 
 
         <!-- footer -->
-        <footer>
-            <h1>pizza/footer</h1>
-        </footer>
+        <?php include("includes/footer.php")?>
     </div>
     <script src="js/loader.js"></script>
 </body>
