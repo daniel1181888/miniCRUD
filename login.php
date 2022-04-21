@@ -29,9 +29,9 @@
             <h1>login form</h1>
             <form action="php/validate.php" method="post">
                 <p>Username</p>
-                <input type="text" name="username" placeholder="username">
+                <input id="username" type="text" oninput="changeColor(this.value)" name="username" placeholder="username">
                 <p>password</p>
-                <input type="password" name="password" placeholder="password">
+                <input id="password" name="password" type="password" oninput="changeColor(this.value)" placeholder="password">
                 <button type="submit" name="submitknop">login</button>
             </form>
         </div>

@@ -1,3 +1,3 @@
 <footer>
-    <h1>pizza/footer</h1>
+    <h1>gewoon pizza!</h1>
 </footer>

@@ -1,6 +1,17 @@
 <?php
-    include_once("includes/connect.php");
-    session_start();
+
+session_start();
+if(isset($_SESSION["roll"])){
+    if($_SESSION["roll"]!="admin") {
+        header("Location: ../index.php");
+        exit;
+    }
+
+} else{
+    header("Location: ../index.php");
+    exit;
+}
+
 
     if(isset($_SESSION["roll"])){
         if($_SESSION["roll"]!="admin") {
@@ -46,9 +57,14 @@
                 <p>prijs</p>
                 <input type="text"  name ="prijs" placeholder="prijs">
                 <p>foto van item</p>
-                <input type="file">
+                <input type="text" name = "fotolink" placeholder="fotolink"> 
                 <p>item beschrijving</p>
                 <input type="text"  name = "beschrijving" placeholder="beschrijving">
+                <p>category<p>
+                <select name="cat">
+                    <option value="0"> eten </option>
+                    <option value="1"> drinken </option>
+                </select>
                 <button type="submit" name="submitknop">add</button>
             </form>
         </div>

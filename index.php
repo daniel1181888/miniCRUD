@@ -28,11 +28,19 @@
         <!-- Header/Nav -->
         <?php include("includes/header.php")?>
 
+
         <!-- Main -->
         <main>
+            <div id="zoekbar">
+                <form action="#" method="get">
+                    <input id="zoekinput" type="text" placeholder="Search.." name="search">
+                    <button id="zoekknop" type="submit" name="zoek">Submit</button>
+                </form>
+            </div>
+
             <img id="gewoonpizza" src="img/gewoonpizza2.png" alt="">
             <div class="items">
-                <?php include("php/readItems.php")?>
+                <?php include("php/readItemspizza.php")?>
             </div>
         </main>
 

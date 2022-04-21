@@ -44,7 +44,7 @@
                     <th>beschrijving</th>
                     <th>naam</th>
                 </tr>
-                <button id ="toevoegenknop"  type ="submit" name="submitknop">bestel</button>
+                <button class ="toevoegenknop"  type ="submit" name="submitknop">bestel</button>
             </form>
         </div>
     </main>

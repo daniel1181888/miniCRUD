@@ -205,7 +205,7 @@ main.short {
     align-items: center;
 }
 
-#toevoegenknop{
+.toevoegenknop{
     font-size: 18px;
     font-weight: bold;
     margin: 20px 0;
@@ -217,7 +217,7 @@ main.short {
     background-color: orange;
 }
 
-#toevoegenknop:active{
+.toevoegenknop:active{
     background-color: rgb(168, 115, 16);
     color: white;
 }
@@ -238,6 +238,7 @@ main.short {
 }
 
 .naam{
+    font-size: 40px;
     width: 100%;
     height: 50%;
     display: flex;
@@ -250,6 +251,8 @@ main.short {
 .beschrijving{
     width: 100%;
     height: 50%;
+    display: flex;
+    justify-content: flex-start
 }
 
 .itemdetails{
@@ -311,3 +314,57 @@ table {
     background-color: #f0c330;
 }
 
+#zoekbar{
+    width: 300px;
+}
+
+#zoekknop{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 40%;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: orange;
+}
+
+#zoekinput{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 50%;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+select{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 70%;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.koopknop{
+    width: 50%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.discrp{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

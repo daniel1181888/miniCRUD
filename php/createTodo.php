@@ -6,5 +6,5 @@
    $stmt ->execute();
    $result = $stmt -> fetchAll();
 
-   foreach($result as $res) {
+   foreach($result as $res) {}
 ?>
