@@ -15,8 +15,7 @@
     </div>
     <div id="content">
 
-    <!-- header/nav -->
-
+    <!-- Header/Nav -->
     <header>
         <nav>
             <a href="index.php">pizzas</a>
@@ -34,7 +33,7 @@
         </nav>
     </header>
 
-
+    <!-- Main -->
     <main class="short">
         <div class="asortiment">
             <h1>winkelwagen</h1>
@@ -49,10 +48,12 @@
             </form>
         </div>
     </main>
-    <footer>
-        <h1>pizza/footer</h1>
-    </footer>
+
+    <!-- Footer -->
+    <?php include_once("includes/footer.php"); ?>
     </div>
+
+    <!-- Scripts -->
     <script src="js/loader.js"></script>
 </body>
 

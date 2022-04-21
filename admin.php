@@ -1,15 +1,13 @@
-<?php include_once("includes/connect.php"); ?>
-
 <?php
-session_start();
-if(isset($_SESSION["roll"])){
-    if($_SESSION["roll"]!="admin") {
-        header("Location: ../index.php");
-        exit;
+    include_once("includes/connect.php");
+    session_start();
+
+    if(isset($_SESSION["roll"])){
+        if($_SESSION["roll"]!="admin") {
+            header("Location: ../index.php");
+            exit;
+        }
     }
-
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +82,11 @@ if(isset($_SESSION["roll"])){
             </table>
         </div>
     </main>
-    <?php include("includes/footer.php")?>
+
+    <!-- Footer -->
+    <?php include("includes/footer.php"); ?>
+
+    <!-- Scripts -->
     <script src="js/login.js"></script>
 </body>
 
