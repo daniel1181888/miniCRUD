@@ -1,6 +1,7 @@
 <?php
-
 session_start();
+include_once("includes/connect.php");
+
 if(isset($_SESSION["roll"])){
     if($_SESSION["roll"]!="admin") {
         header("Location: ../index.php");
@@ -12,13 +13,6 @@ if(isset($_SESSION["roll"])){
     exit;
 }
 
-
-    if(isset($_SESSION["roll"])){
-        if($_SESSION["roll"]!="admin") {
-            header("Location: ../index.php");
-            exit;
-        }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +33,7 @@ if(isset($_SESSION["roll"])){
     <?php include("includes/header.php")?>
 
     <?php
-    $sql = "SELECT * 
-    FROM menukaart 
-    WHERE ID = :ID";
+    $sql = "SELECT * FROM menukaart WHERE ID = :ID";
     $stmt = $connect -> prepare($sql);
     $stmt -> bindParam(":ID", $_GET["ID"]);
     $stmt -> execute();
