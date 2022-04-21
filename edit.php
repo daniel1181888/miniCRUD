@@ -26,30 +26,34 @@
         <div class="login-form">
             <h1>edit form</h1>
             <?php 
-                $sql = "SELECT * FROM menukaart";
+                $sql = "SELECT * FROM menukaart WHERE id = :id";
                 $stmt = $connect -> prepare($sql);
+                $stmt->bindParam(":id",$_GET['id']);
                 $stmt ->execute();
                 $result = $stmt -> fetchAll();
 
-                foreach($result as $res) {
-                    echo "<p>".$res["ID"]."</p>";
-                    echo "<p>".$res["naam"]."</p>";
-                    echo "<p>".$res["prijs"]."</p>";
-                    echo "<p>".$res["beschrijving"]."</p>";
-                }
+                foreach($result as $res) { 
+                    ?>
+                    <form action="php/update.php" method="post">;
+                        <p>ID</p>
+                        <input type="text" value="<?php echo $res['ID']; ?>" name="id" placeholder="ID">
+                        <p>naam</p>
+                        <input type="text" value="<?php echo $res["naam"];?>" name="naam" placeholder="naam">
+                        <p>prijs</p>
+                        <input type="text" value="<?php echo $res["prijs"];?>" name="prijs" placeholder="prijs">
+                        <p>fotolink</p>
+                        <input type="text" value="<?php echo $res["fotolink"];?>" name="fotolink" placeholder="fotolink">
+                        <p>beschrijving</p>
+                        <input type="text" value="<?php echo $res["beschrijving"];?>" name="beschrijving" placeholder="beschrijving">
+                        <p>category<p>
+                        <select name="cat">
+                            <option value="0"> eten </option>
+                            <option value="1"> drinken </option>
+                        </select>
+                        <button type="submit" name="submitknop">Update</button>
+                    </form>
+                <?php }
             ?>
-
-            <form action="php/update.php" method="post">
-                <p>ID</p>
-                <input type="text" name="id" placeholder="ID">
-                <p>naam</p>
-                <input type="text" name="naam" placeholder="naam">
-                <p>prijs</p>
-                <input type="text" name="prijs" placeholder="prijs">
-                <p>beschrijving</p>
-                <input type="text" name="beschrijving" placeholder="beschrijving">
-                <button type="submit" name="submitknop">Update</button>
-            </form>
         </div>
     </main>
     <?php include("includes/footer.php")?>
