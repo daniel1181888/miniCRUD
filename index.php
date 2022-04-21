@@ -1,8 +1,10 @@
-<?php include("includes/connect.php"); 
-session_start();
-if(isset($_POST["user"])){
-    $_SESSION["username"] = $_POST["user"];
-}
+<?php
+    include_once("includes/connect.php");
+
+    session_start();
+    if(isset($_POST["user"])){
+        $_SESSION["username"] = $_POST["user"];
+    }
 ?>
 
 
@@ -18,21 +20,16 @@ if(isset($_POST["user"])){
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<!-- body -->
-
 <body onload="pageLoader()">
     <div id="loader">
         <img id="laadfoto" src="img/PIZZA.png" alt="">
     </div>
     <div id="content">
-
-
-        <!-- header/nav -->
+        <!-- Header/Nav -->
         <?php include("includes/header.php")?>
 
 
-
-        <!-- main -->
+        <!-- Main -->
         <main>
             <div id="zoekbar">
                 <form action="#" method="get">
@@ -47,12 +44,11 @@ if(isset($_POST["user"])){
             </div>
         </main>
 
-
-        <!-- footer -->
-        <?php include("includes/footer.php")?>
+        <!-- Footer -->
+        <?php include("includes/footer.php"); ?>
     </div>
+
+    <!-- Scripts -->
     <script src="js/loader.js"></script>
 </body>
-
-
 </html>

@@ -17,11 +17,10 @@
     </div>
     <div id="content">
 
-    <!-- header/nav -->
+    <!-- Header/Nav -->
     <?php include("includes/header.php")?>
     
-
-
+    <!-- Main -->
     <main class="short">
         <div class="login-form">
             <h1>edit form</h1>
@@ -56,8 +55,10 @@
             ?>
         </div>
     </main>
-    <?php include("includes/footer.php")?>
+    <?php include("includes/footer.php"); ?>
     </div>
+
+    <!-- Scripts -->
     <script src="js/loader.js"></script>
 </body>
 

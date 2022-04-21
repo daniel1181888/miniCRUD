@@ -1,5 +1,6 @@
-<?php include_once("includes/connect.php"); 
-session_start();
+<?php 
+    include_once("includes/connect.php"); 
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +20,10 @@ session_start();
     </div>
     <div id="content">
 
-    <!-- header/nav -->
+    <!-- Header/Nav -->
     <?php include("includes/header.php")?>
     
-
-
+    <!-- Main -->
     <main class="short">
         <div class="login-form">
             <h1>login form</h1>
@@ -36,8 +36,12 @@ session_start();
             </form>
         </div>
     </main>
-    <?php include("includes/footer.php")?>
+
+    <!-- Footer -->
+    <?php include("includes/footer.php"); ?>
     </div>
+
+    <!-- Scripts -->
     <script src="js/loader.js"></script>
     <script src="js/validateForm.js"></script>
 </body>

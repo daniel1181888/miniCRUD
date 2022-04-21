@@ -1,8 +1,11 @@
 <?php
 session_start();
 include_once("../includes/connect.php");
-$stmt = $connect->prepare("SELECT * FROM user");
+
+$sql = "SELECT * FROM user";
+$stmt = $connect->prepare($sql);
 $stmt->execute();
+
 if ($stmt->rowCount() > 0) {
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
         if($_POST["username"] == $result["username"]){
